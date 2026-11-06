@@ -5,8 +5,8 @@ Source: CMS public data only. Workbook: `adcs_retention.xlsx` (tabs: roster_now,
 ## Bottom line
 
 - ADCS lost about 153 clinicians seen at its addresses from 2019 to 2024 and not on today's roster. Half are MD/DO (79) and half are PA/NP (74).
-- About 40 of those are probably roster gaps, not exits. Adjusted, the count is 113.
-- Annual exit rate runs about 5% to 8% adjusted (7% to 12% unadjusted). The 2024 figure is higher, but it pools about two years of departures. Treat it as roughly 6% to 7% a year.
+- Up to 9 of those may be roster gaps (still at ADCS, missing from the CMS file). Taking them out gives 144. I first estimated 40, and that was too high (see QC).
+- Annual exit rate runs about 7% to 12% from 2019 to 2023. The 2024 figure (13%) pools about two years of departures, so treat it as roughly 6% to 7% a year.
 - Most exits who can be traced went to another dermatology group, not out of the field.
 
 ## How the roster was built (read this first)
@@ -27,16 +27,16 @@ Competitors that share ADCS buildings (Monarch Dermatology, Clinical Skin Center
 
 | Year | MD/DO | PA/NP | Total | Exits (last year seen) | Exit rate | Adjusted exits | Adjusted rate |
 |---|---|---|---|---|---|---|---|
-| 2019 | 121 | 124 | 245 | 25 | 10.2% | 14 | 5.7% |
-| 2020 | 113 | 123 | 236 | 20 | 8.5% | 16 | 6.8% |
-| 2021 | 110 | 139 | 249 | 30 | 12.0% | 21 | 8.4% |
-| 2022 | 112 | 142 | 254 | 18 | 7.1% | 15 | 5.9% |
-| 2023 | 113 | 168 | 281 | 20 | 7.1% | 14 | 5.0% |
+| 2019 | 121 | 124 | 245 | 25 | 10.2% | 24 | 9.8% |
+| 2020 | 113 | 123 | 236 | 20 | 8.5% | 20 | 8.5% |
+| 2021 | 110 | 139 | 249 | 30 | 12.0% | 29 | 11.6% |
+| 2022 | 112 | 142 | 254 | 18 | 7.1% | 18 | 7.1% |
+| 2023 | 113 | 168 | 281 | 20 | 7.1% | 20 | 7.1% |
 | 2024 | 115 | 187 | 302 | 40 | 13.2% | 33 | 10.9% |
 
 MD/DO headcount is flat. Growth is all PA/NP (124 to 187).
 
-**Exits by state of last ADCS address** (core, adjusted): FL 57 (42), MI 20 (12), CO 19 (19), PA 17 (13), MD 10 (5), VA 9 (8), SC 6 (4), AZ 6 (4), GA 3 (3), other 6 (3).
+**Exits by state of last ADCS address** (core, adjusted): FL 57 (53), MI 20 (19), CO 19 (19), PA 17 (16), MD 10 (9), VA 9 (9), SC 6 (5), AZ 6 (6), GA 3 (3), other 6 (5).
 
 **Destination mix** (core exits, 153)
 
@@ -52,7 +52,7 @@ MD/DO headcount is flat. Growth is all PA/NP (124 to 187).
 - Top destinations: Forefront Dermatology (5), OnSpot-FL (3), Aqua Dermatology of Florida (3), then a long tail of one or two each. Eight MD/DO exits now have no group, only an individual enrollment.
 - Found exits: median move is 27 miles. 46% are within 25 miles and 28% moved to a different state.
 
-**Medicare allowed amount of exits in their last ADCS year:** $18.7M core ($14.0M MD/DO, $4.7M PA/NP), or $16.7M adjusted. These are nominal dollars for one year each, not annualized. 2024 exits account for $8.4M of the core total.
+**Medicare allowed amount of exits in their last ADCS year:** $18.7M core ($14.0M MD/DO, $4.7M PA/NP), or $18.1M adjusted. These are nominal dollars for one year each, not annualized. 2024 exits account for $8.4M of the core total.
 
 **Top 25 current providers** are on the summary tab (2024 allowed amount, all billing locations). #1 is a Mohs surgeon in West Columbia, SC at $5.5M. The 25th is at $0.9M. 11 of the 25 belong to the Florida (Leavitt) group.
 
@@ -62,12 +62,12 @@ MD/DO headcount is flat. Growth is all PA/NP (124 to 187).
 - Within 25 miles and same state: 10 of 15 confirm. Most misses are the same metro area, such as Jefferson Hills and Pittsburgh.
 - "Found" exits: 5 of 10 strict, 8 of 10 within 25 miles.
 - "Not found" exits: 2 of 5 confirm. Three of five still list the ADCS address in NPPES.
-- That last result led me to check all 61 not-found exits. NPPES still shows 40 at the ADCS address, 17 elsewhere, and 4 have no record (likely deactivated). So the "retired or left Medicare" bucket is mostly roster gaps.
+- I then checked all 61 not-found exits. NPPES still shows 40 at the ADCS address, 17 elsewhere, and 4 have no record (likely deactivated). That NPPES address is weak evidence of still working there. 33 of the 40 records were last updated before 2023, and 27 of the 40 did not bill Medicare in 2023 or 2024. Only 9 have a recent signal (billed in 2024, or NPPES updated since 2025), and those are the only ones treated as plausible roster gaps.
 - NPPES and the CMS clinician file draw on overlapping enrollment data, so this is a consistency check, not independent proof.
 
 ## Surprising
 
-1. **Not-found is mostly not exits.** 40 of 61 are probably still at ADCS. Do not quote 40% "retired or left Medicare."
+1. **The not-found bucket is murky.** It is 40% of core exits. Most likely left, retired, or stopped billing FFS, but a clinician can also be missing from the CMS file while still working. Only 9 show recent signs of being current.
 2. **The address match missed 37% of the roster.** 157 of 421 roster NPIs that billed Medicare in 2024 were never seen at an ADCS address in any year. They are 73 PAs, 44 dermatologists, 21 NPs, and a few others. Billing addresses in the Medicare file differ from enrollment addresses. Real exits are likely undercounted too.
 3. **Medicare allowed dollars jumped 39% in 2024** ($63.5M to $88.4M) against 7% more providers. Same-NPI growth was about 22%, and about 40 NPIs were new. I did not chase the cause.
 4. **The Florida group has non-derm specialties.** Top 25 includes an ENT and a pathologist. The top-25 list uses group membership, not specialty.
